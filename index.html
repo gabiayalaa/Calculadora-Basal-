@@ -4,6 +4,7 @@
         <title>Calculadora Basal</title> 
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css"/>
+        <script src="script.js" defer></script>
 </head>
 <body>
     <div id="contenedor">
@@ -14,21 +15,46 @@
             <input class="item" id="peso" type="number" placeholder= "Ingrese el peso en Kg"/>
             <p class="item" id="error">* Debe completar todos los datos</p>
             <button class="item" id="Calcular">Calcular</button>
-            <p class="item resultado" id="flu">71cc/h</p>
-            <p class="item resultado" id="man">m+m/2 : 105cc/h</p>
+            <div id="resultados"></div>
+            <div id="resultadotext"></div>
+            <p class="item resultado" id="volu">Volumen diario en cc:</p>
+            <p class="item resultado" id="flu">Mantenimiento: 71cc/h </p>
+            <p class="item resultado" id="man">m+m/2: 105cc/h</p>
+            <p class="item resultado" id="metod">Se utilizó el método Holliday-Segar</p>
         </div>
+        <div id="resultado1"</div>
+            <p class="item resultado" id="SC1500">SC*1500</p>
+            <p class="item resultado" id="VD1">cc</p>
+            <p class="item resultado" id="M1">cc/hr</p>
+            <p class="item resultado" id="MM1">m+m/2</p>
         </div>
+        <div id="resultado2">
+            <p class="item resultado" id="SC2000">SC*2000</p>
+            <p class="item resultado" id="VD2">cc</p>
+            <p class="item resultado" id="M2">cc/hr</p>
+            <p class="item resultado" id="MM2">m+m/2</p>
+        </div>
+    </div>
     <div id="detalle"> 
-        <div class="contenido">
-            <h1>¿Cómo se calcula?</h1>
+    <div class="contenido">
+        <div id="hs" style="display: none;">
+            <h1>Método de Holliday-Segar</h1>
+            <h2>¿Cómo se calcula?</h1>
             <ul>
                 <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-                <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg</li>
-                <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
+                <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
+                <li>De 20kg para arriba, se suman 20cc por cada kilo adicional.</li>
+            </ul>
+        </div>
+        <div id="sc" style="display: none;">
+        <h1>Método de Superficie Corporal</h1>
+            <h2>¿Cómo se calcula?</h1>
+            <ul>
+                <li>Cuando el niño pesa mas de 30kg, se utiliza un cálculo diferente: Superficie corporal = ( (peso * 4) + 7) / (peso + 90)</li>
+                <li>Este resultado se multiplica por 1500 o por 2000 para hallar el valor del volumen diario en cc, y el médico decide cual de los dos resultados utilizar.</li>
             </ul>
         </div>
     </div>
 </div>
-</body>
 </body>
 </html>

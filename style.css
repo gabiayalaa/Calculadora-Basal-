@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2? family=Montserrat:400,800');
 
 body{
@@ -13,10 +14,13 @@ h1 {
     width: 900px;
     height: 500px;
     text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
     position: absolute;
     inset: 0;
     margin: auto;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
 }
 #calculadora{
     background: rgb(120, 207, 200);
@@ -31,8 +35,9 @@ h1 {
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
-    float: left;
-    color: #ffffff;
+    float: right;
+    color: #f1e1e1;
+    font-size: 15px;
 }
 .contenido{
     /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
@@ -46,13 +51,13 @@ input {
 	width: 70%;
     padding: 12px 15px;
     border: none;
-    background-color: #c9b9b9;
+    background-color: #e4d2d2;
 }
 
 button {
   font-size: 15px;
 	font-weight: bold;
-	padding: 12px 35px;
+	padding: 12px 45px;
 	border-radius: 30px;
 	background-color: #f7ffff;
 	border: 1px solid #000000;
@@ -66,29 +71,39 @@ button {
 button:active {
 	transform: scale(0.95);
 }
-#contenedor{
-    width: 900px;
-    height: 500px;
-    text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
-  }
+
   #error{
     color: red;
     font-weight: bold;
     display: none;
+}       /*Espacio entre el botón y el elemento encima (top) del mismo*/
+
+#resultados {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+#resultadotext {
+    position: relative;
+    text-align: right;
+    float: left;
+    align-self: end;
+}
+#resultado1 {
+    position: relative;
+    text-align: left;
+    float: left;
+}
+#resultado2 {
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.resultado {
+    color: #142157;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: none;          /*none oculta el objeto y block muestra el objeto*/
 }
 
-.resultado{
-    color: #0ad14c;
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 5px;
-    display: none;
-}
