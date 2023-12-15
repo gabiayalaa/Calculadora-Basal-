@@ -1,28 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2? family=Montserrat:400,800');
-
-body{
+body {
+    font-family: 'Montserrat', sans-serif;
     background: #d6ccc7;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #3e363f;
 }
+
 h1 {
-    color: rgb(0, 0, 0); 
-    
+    color: rgb(0, 0, 0);
+
 }
-#contenedor{
+
+#contenedor {
+    text-align: center;
+    /* Tamaño de la calculadora */
     width: 900px;
     height: 500px;
-    text-align: center;
+    /* Mantener Centrada la calculadora */
     position: absolute;
     inset: 0;
     margin: auto;
+    /* Hacemos los bordes */
     border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-#calculadora{
+
+
+.contenido {
+    
+    /* Para centrar el contenido de cada sección de la calculadora */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    padding: 40px;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+#calculadora_sectorIzquierdo {
     background: rgb(120, 207, 200);
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
@@ -30,7 +51,8 @@ h1 {
     float: left;
 }
 
-#detalle{
+#detalles_sectorDerecho {
+
     background: #c548c5;
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
@@ -39,71 +61,62 @@ h1 {
     color: #f1e1e1;
     font-size: 15px;
 }
-.contenido{
-    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    padding: 40px;
+#metodo{
+    display: none;
+    color:#000000;
+    font-weight: 800;
+    font-size: 25px;
+    
 }
+
 input {
-	width: 70%;
+    width: 70%;
     padding: 12px 15px;
     border: none;
     background-color: #e4d2d2;
 }
 
 button {
-  font-size: 15px;
-	font-weight: bold;
-	padding: 12px 45px;
-	border-radius: 30px;
-	background-color: #f7ffff;
-	border: 1px solid #000000;
-	color: #d48888;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 45px;
+    border-radius: 30px;
+    background-color: #f7ffff;
+    border: 1px solid #000000;
+    color: #d48888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 10%;
-	transition: transform 20ms ease-in;
+    transition: transform 20ms ease-in;
 }
 
 button:active {
-	transform: scale(0.95);
+    transform: scale(0.95);
 }
 
-  #error{
-    color: red;
-    font-weight: bold;
-    display: none;
-}       /*Espacio entre el botón y el elemento encima (top) del mismo*/
 
-#resultados {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-}
-#resultadotext {
-    position: relative;
-    text-align: right;
-    float: left;
-    align-self: end;
-}
-#resultado1 {
-    position: relative;
-    text-align: left;
-    float: left;
-}
-#resultado2 {
-    position: relative;
-    text-align: left;
-    float: left;
-}
-.resultado {
-    color: #142157;
+.item_resultado {
+    color: purple;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 5px;
-    display: none;          /*none oculta el objeto y block muestra el objeto*/
+    display: none;
+
 }
 
+#comose{
+    display: none;
+    color:#000000;
+    font-weight: 800;
+    font-size: 25px;
+    
+}
+#PrimeraLinea{
+    display:block;
+}
+#SegundaLinea{
+    display:block;
+}
+#TercerLinea{
+    display:block;
+}
